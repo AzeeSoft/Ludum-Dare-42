@@ -22,8 +22,9 @@ public class PlayerActionController : MonoBehaviour
         get { return _carryingObject != null; }
     }
 
-    private string _carryButton = "Fire1";
-    private string _dropButton = "Fire1";
+    private string _carryButton = "Carry";
+    private string _dropButton = "Carry";
+    private string _throwButton = "Fire1";
     private string _shweepButton = "Fire2";
 
     private Player _player;
@@ -56,6 +57,10 @@ public class PlayerActionController : MonoBehaviour
             if (Input.GetButtonDown(_dropButton))
             {
                 Drop(_carryingObject);
+            }
+            else if (Input.GetButtonDown(_throwButton))
+            {
+
             }
         }
         else
@@ -132,7 +137,8 @@ public class PlayerActionController : MonoBehaviour
             {
                 Vector3 playerToObject = (raycastHit.transform.position - shweepOrigin);
 
-                float strength = ShweepData.MaxStrength - AZTools.Map(playerToObject.magnitude, 0, ShweepData.MaxDistance, 0, ShweepData.MaxStrength);
+                float strength = ShweepData.MaxStrength - AZTools.Map(playerToObject.magnitude, 0,
+                                     ShweepData.MaxDistance, 0, ShweepData.MaxStrength);
 
                 Vector3 force = playerToObject.normalized * strength;
 
