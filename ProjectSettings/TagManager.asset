@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Product
   - ProductDeliveryArea
+  - Incinerator
   layers:
   - Default
   - TransparentFX

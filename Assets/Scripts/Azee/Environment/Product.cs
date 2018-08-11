@@ -29,6 +29,9 @@ public class Product : MonoBehaviour
         {
             // TODO: Update LED and do whateva
             Destroy(gameObject);
+        } else if (collision.gameObject.CompareTag("Incinerator"))
+        {
+            Destroy(gameObject);
         }
     }
 }
