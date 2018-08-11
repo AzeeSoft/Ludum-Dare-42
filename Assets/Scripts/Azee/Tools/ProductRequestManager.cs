@@ -50,13 +50,24 @@ public class ProductRequestManager : MonoBehaviour
 
     void RequestNewProduct()
     {
-        // TODO: Modify this to use Kris's Randomizer once that's ready
-
         List<string> productNameList = ProductManager.Instance.GetProductNamesInScene();
         if (productNameList.Count > 0)
         {
             int rand = Random.Range(0, productNameList.Count);
             _requestingProduct = ProductManager.Instance.GetProductData(productNameList[rand]);
+        }
+        else
+        {
+            List<ProductModel> productList = ProductManager.Instance.GetCompleteProductList(false);
+            if (productList.Count > 0)
+            {
+                int rand = Random.Range(0, productList.Count);
+                _requestingProduct = productList[rand];
+            }
+        }
+
+        if (_requestingProduct != null)
+        {
             _displayController.ShowProductOnScreen(_requestingProduct);
         }
 

@@ -91,7 +91,7 @@ public class MainLevelManager : MonoBehaviour
 
     private void CheckStrikes()
     {
-        if (ProductRequestManager.Instance.Strikes > MaxStrikes)
+        if (ProductRequestManager.Instance.Strikes >= MaxStrikes)
         {
             OnGameLost();
         }

@@ -11,7 +11,7 @@ public class DisplayController : MonoBehaviour
 
 	// Use this for initialization
 	void Start () {
-		ShowProductOnScreen("Cylinder Item");
+
 	}
 	
 	// Update is called once per frame
