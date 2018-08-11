@@ -394,26 +394,6 @@ Prefab:
       propertyPath: m_RootOrder
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 114758415192636628, guid: 2863aed0f196c9642ab461b1e5e2af63,
-        type: 2}
-      propertyPath: ShweepData.Strength
-      value: 500
-      objectReference: {fileID: 0}
-    - target: {fileID: 114758415192636628, guid: 2863aed0f196c9642ab461b1e5e2af63,
-        type: 2}
-      propertyPath: ShweepData.Radius
-      value: 2.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 114758415192636628, guid: 2863aed0f196c9642ab461b1e5e2af63,
-        type: 2}
-      propertyPath: ShweepData.MaxDistance
-      value: 10
-      objectReference: {fileID: 0}
-    - target: {fileID: 114758415192636628, guid: 2863aed0f196c9642ab461b1e5e2af63,
-        type: 2}
-      propertyPath: ShweepData.MaxStrength
-      value: 1000
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2863aed0f196c9642ab461b1e5e2af63, type: 2}
   m_IsPrefabAsset: 0

@@ -65,14 +65,13 @@ public class PlayerActionController : MonoBehaviour
 
             if (shweepable != null)
             {
-                Vector3 pointOfContact = raycastHit.point;
                 Vector3 playerToObject = (raycastHit.transform.position - shweepOrigin);
 
                 float strength = ShweepData.MaxStrength - AZTools.Map(playerToObject.magnitude, 0, ShweepData.MaxDistance, 0, ShweepData.MaxStrength);
 
                 Vector3 force = playerToObject.normalized * strength;
 
-                shweepable.Shweep(force, pointOfContact);
+                shweepable.Shweep(force);
             }
         }
     }

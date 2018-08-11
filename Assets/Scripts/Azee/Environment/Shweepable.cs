@@ -11,18 +11,18 @@ public class Shweepable : MonoBehaviour
         rigidbody = GetComponent<Rigidbody>();
     }
 
-	// Use this for initialization
-	void Start () {
-		
-	}
-	
-	// Update is called once per frame
-	void Update () {
-		
-	}
-
-    public void Shweep(Vector3 force, Vector3 positionOfContact)
+    // Use this for initialization
+    void Start()
     {
-        rigidbody.AddForceAtPosition(force, positionOfContact);
+    }
+
+    // Update is called once per frame
+    void Update()
+    {
+    }
+
+    public void Shweep(Vector3 force)
+    {
+        rigidbody.AddForce(force); // Not adding force at position, because that doesn't have much effect when too close to the object
     }
 }
