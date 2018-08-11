@@ -7,7 +7,7 @@ public class ProductManager : MonoBehaviour
 {
     public static ProductManager Instance;
 
-    public List<ProductModel> CompleteProductList = new List<ProductModel>();
+    [SerializeField] private List<ProductModel> CompleteProductList = new List<ProductModel>();
 
     private readonly Dictionary<string, ProductModel> _productHash = new Dictionary<string, ProductModel>();
 
@@ -111,6 +111,11 @@ public class ProductManager : MonoBehaviour
         }
 
         return productNames;
+    }
+
+    public List<ProductModel> GetCompleteProductList()
+    {
+        return CompleteProductList;
     }
 
     public void OnProductAdded(Product product)
