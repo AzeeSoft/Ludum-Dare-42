@@ -99,12 +99,12 @@ public class ProductManager : MonoBehaviour
         return _totalWeight;
     }
 
-    public List<string> GetProductNamesInScene()
+    public List<string> GetProductNamesInScene(bool includeTrash = false)
     {
         List<string> productNames = new List<string>();
         foreach (KeyValuePair<string, int> keyValuePair in _productCounts)
         {
-            if (keyValuePair.Value > 0)
+            if ((!_productHash[keyValuePair.Key].IsTrash || includeTrash) && keyValuePair.Value > 0)
             {
                 productNames.Add(keyValuePair.Key);
             }

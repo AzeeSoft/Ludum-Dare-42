@@ -30,12 +30,14 @@ public class PlayerActionController : MonoBehaviour
     private string _shweepButton = "Fire2";
 
     private Player _player;
+    private Camera _camera;
 
     private Carryable _carryingObject = null;
 
     void Awake()
     {
         _player = GetComponent<Player>();
+        _camera = GetComponentInChildren<Camera>();
     }
 
     // Use this for initialization
@@ -82,11 +84,11 @@ public class PlayerActionController : MonoBehaviour
     void CarryPointingObject()
     {
         RaycastHit raycastHit = new RaycastHit();
-        bool didHit = Physics.Raycast(transform.position, transform.forward, out raycastHit);
+        bool didHit = Physics.Raycast(_player.RaycastOriginTransform.position, _player.RaycastOriginTransform.forward, out raycastHit);
 
         if (didHit)
         {
-            Carryable carryable = raycastHit.transform.GetComponent<Carryable>();
+            Carryable carryable = raycastHit.transform.gameObject.GetComponent<Carryable>();
             if (carryable != null)
             {
                 Carry(carryable);
@@ -96,6 +98,7 @@ public class PlayerActionController : MonoBehaviour
 
     void Carry(Carryable carryable)
     {
+//        Debug.Log("Carrying.. " + carryable.gameObject);
         if (IsCarrying)
         {
             Drop(carryable);
@@ -118,7 +121,7 @@ public class PlayerActionController : MonoBehaviour
     {
         if (IsCarrying)
         {
-            carryable.OnThrown(carryable.transform.forward * ThrowStrength);
+            carryable.OnThrown(_camera.transform.forward * ThrowStrength);
             _carryingObject = null;
         }
     }
@@ -131,13 +134,13 @@ public class PlayerActionController : MonoBehaviour
         DebugExtension.DebugCapsule(start, end, ShweepData.GizmoColor, ShweepData.Radius);
     }
 
-    void PerformShweep()
+    void PerformShweep()    
     {
         int layerMask = -5; // All Layers
 
         Vector3 shweepOrigin = transform.position;
 
-        RaycastHit[] raycastHits = Physics.SphereCastAll(shweepOrigin, ShweepData.Radius, transform.forward,
+        RaycastHit[] raycastHits = Physics.SphereCastAll(shweepOrigin, ShweepData.Radius, _player.RaycastOriginTransform.forward,
             ShweepData.MaxDistance, layerMask, QueryTriggerInteraction.Ignore);
 
         foreach (RaycastHit raycastHit in raycastHits)

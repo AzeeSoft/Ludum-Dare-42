@@ -26,6 +26,8 @@ public class ProductRequestManager : MonoBehaviour
     [SerializeField] [ReadOnly] private int _strikes = 0;
     [SerializeField] [ReadOnly] private float _timeRemaining = 0;
 
+    private bool _shownInitalRequest = false;
+
     void Awake()
     {
         Instance = this;
@@ -33,21 +35,30 @@ public class ProductRequestManager : MonoBehaviour
 
 	// Use this for initialization
 	void Start () {
-		RequestNewProduct();
 	}
 	
 	// Update is called once per frame
 	void Update () {
+	    if (!_shownInitalRequest)
+	    {
+            RequestNewProduct();
+	        _shownInitalRequest = true;
+	    }
+
 		UpdateTimeRemaining();
 	}
 
     void RequestNewProduct()
     {
-        // TODO: Replace this with Kris's Randomizer once that's ready
-        int rand = Random.Range(0, ProductManager.Instance.CompleteProductList.Count);
-        _requestingProduct = ProductManager.Instance.CompleteProductList[rand];
+        // TODO: Modify this to use Kris's Randomizer once that's ready
 
-        _displayController.ShowProductOnScreen(_requestingProduct);
+        List<string> productNameList = ProductManager.Instance.GetProductNamesInScene();
+        if (productNameList.Count > 0)
+        {
+            int rand = Random.Range(0, productNameList.Count);
+            _requestingProduct = ProductManager.Instance.GetProductData(productNameList[rand]);
+            _displayController.ShowProductOnScreen(_requestingProduct);
+        }
 
         ResetTimeRemaining();
     }

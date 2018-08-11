@@ -6,6 +6,10 @@ public class Product : MonoBehaviour
 {
     public ProductModel ProductData;
 
+    void Awake()
+    {
+    }
+
     // Use this for initialization
     void Start()
     {

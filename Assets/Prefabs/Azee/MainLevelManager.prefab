@@ -56,6 +56,8 @@ MonoBehaviour:
   CompleteProductList:
   - {fileID: 11400000, guid: ebc4acd35183df6469ba9cf9659f9e03, type: 2}
   - {fileID: 11400000, guid: c52b926aca66a7b498f7cc394881ba51, type: 2}
+  - {fileID: 11400000, guid: 9fc1f6e5559ac5f41be81d8b57215898, type: 2}
+  - {fileID: 11400000, guid: a9360101830a3544da70e8e9fa8d7305, type: 2}
   _totalWeight: 0
   PrintProductCounts: 0
 --- !u!114 &114157994799056670

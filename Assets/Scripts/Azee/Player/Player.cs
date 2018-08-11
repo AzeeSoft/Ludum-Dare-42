@@ -5,6 +5,7 @@ using UnityEngine;
 public class Player : MonoBehaviour
 {
     public Transform CarryObjectTransform;
+    public Transform RaycastOriginTransform;
 
 	// Use this for initialization
 	void Start () {
