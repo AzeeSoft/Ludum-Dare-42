@@ -17,6 +17,8 @@ public class PlayerActionController : MonoBehaviour
 
     public ShweepDataModel ShweepData;
 
+    public float ThrowStrength = 5f;
+
     public bool IsCarrying
     {
         get { return _carryingObject != null; }
@@ -60,7 +62,7 @@ public class PlayerActionController : MonoBehaviour
             }
             else if (Input.GetButtonDown(_throwButton))
             {
-
+                Throw(_carryingObject);
             }
         }
         else
@@ -108,6 +110,15 @@ public class PlayerActionController : MonoBehaviour
         if (IsCarrying)
         {
             carryable.OnDropped();
+            _carryingObject = null;
+        }
+    }
+
+    void Throw(Carryable carryable)
+    {
+        if (IsCarrying)
+        {
+            carryable.OnThrown(carryable.transform.forward * ThrowStrength);
             _carryingObject = null;
         }
     }

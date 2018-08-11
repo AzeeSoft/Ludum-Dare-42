@@ -51,4 +51,10 @@ public class Carryable : MonoBehaviour {
         _playerCarrying = null;
         _rigidbody.isKinematic = false;
     }
+
+    public void OnThrown(Vector3 force)
+    {
+        OnDropped();
+        _rigidbody.AddForce(force);
+    }
 }
