@@ -5,6 +5,7 @@ using UnityEngine;
 public class Product : MonoBehaviour
 {
     public string ProductName = "";
+    public float Weight = 1f;
 
     // Use this for initialization
     void Start()
@@ -24,6 +25,10 @@ public class Product : MonoBehaviour
 
     void OnCollisionEnter(Collision collision)
     {
-        
+        if (collision.gameObject.CompareTag("ProductDeliveryArea"))
+        {
+            // TODO: Update LED and do whateva
+            Destroy(gameObject);
+        }
     }
 }

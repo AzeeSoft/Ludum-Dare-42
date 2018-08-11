@@ -7,7 +7,10 @@ public class ProductManager : MonoBehaviour
 {
     public static ProductManager Instance;
 
-    private Dictionary<string, int> _productCounts = new Dictionary<string, int>();
+    private readonly Dictionary<string, int> _productCounts = new Dictionary<string, int>();
+
+    [SerializeField] [ReadOnly] private float _totalWeight = 0f;
+
 
     [Button("Print Product Counts", "PrintProductCountList")] public bool PrintProductCounts;
 
@@ -57,6 +60,25 @@ public class ProductManager : MonoBehaviour
         return 0;
     }
 
+    public float GetTotalProductWeight()
+    {
+        return _totalWeight;
+    }
+
+    public List<string> GetProductNamesInScene()
+    {
+        List<string> productNames = new List<string>();
+        foreach (KeyValuePair<string, int> keyValuePair in _productCounts)
+        {
+            if (keyValuePair.Value > 0)
+            {
+                productNames.Add(keyValuePair.Key);
+            }
+        }
+
+        return productNames;
+    }
+
     public void OnProductAdded(Product product)
     {
         if (!_productCounts.ContainsKey(product.ProductName))
@@ -65,6 +87,8 @@ public class ProductManager : MonoBehaviour
         }
 
         _productCounts[product.ProductName]++;
+
+        _totalWeight += product.Weight;
     }
 
     public void OnProductRemoved(Product product)
@@ -72,6 +96,12 @@ public class ProductManager : MonoBehaviour
         if (_productCounts.ContainsKey(product.ProductName))
         {
             _productCounts[product.ProductName]--;
+            _totalWeight -= product.Weight;
+
+            if (_totalWeight < 0)
+            {
+                _totalWeight = 0f;
+            }
         }
     }
 }
