@@ -86,6 +86,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0ab9625b2cba35f42af5bc2b4e0cb7f9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  MaxStrikes: 4
+  MaxTotalWeight: 100
   _gameManager:
     GameTitle: Warehouse
     _profileListManager:
@@ -95,3 +97,5 @@ MonoBehaviour:
     _previewGameData: 1
     _gameDataPreview:
       _gameDataPreviewItems: []
+  _score: 0
+  _isPlaying: 0

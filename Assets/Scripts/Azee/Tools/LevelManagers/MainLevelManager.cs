@@ -30,6 +30,15 @@ public class MainLevelManager : MonoBehaviour
 //    public GameObject WinScreen;
 //    public GameObject LoseScreen;
 
+    public int CurrentDifficulty
+    {
+        get
+        {
+            // TODO: Use some advanced algo/function to get difficulty in a better way based on the score;
+            return 1 + (int)(_score / 10f);
+        }
+    }
+
     public bool IsPlaying
     {
         get { return _isPlaying; }
@@ -80,7 +89,7 @@ public class MainLevelManager : MonoBehaviour
         }
     }
 
-    public void CheckStrikes()
+    private void CheckStrikes()
     {
         if (ProductRequestManager.Instance.Strikes > MaxStrikes)
         {
@@ -88,7 +97,7 @@ public class MainLevelManager : MonoBehaviour
         }
     }
 
-    public void CheckTotalWeight()
+    private void CheckTotalWeight()
     {
         if (ProductManager.Instance.GetTotalProductWeight() > MaxTotalWeight)
         {
@@ -96,7 +105,7 @@ public class MainLevelManager : MonoBehaviour
         }
     }
 
-    public void OnGameLost()
+    private void OnGameLost()
     {
         _isPlaying = false;
 
