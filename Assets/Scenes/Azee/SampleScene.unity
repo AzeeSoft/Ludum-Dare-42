@@ -623,24 +623,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 1919936687125822, guid: 775ce9fbec34a3e43a2d67a8cc4ac9cd, type: 2}
       propertyPath: m_Name
-      value: ProductDeliveryArea
-      objectReference: {fileID: 0}
-    - target: {fileID: 23918264292157232, guid: 775ce9fbec34a3e43a2d67a8cc4ac9cd,
-        type: 2}
-      propertyPath: m_Materials.Array.data[0]
-      value: 
-      objectReference: {fileID: 2100000, guid: e80af0a792d337c4e9cceb47665168a1, type: 2}
-    - target: {fileID: 4862571014900062, guid: 775ce9fbec34a3e43a2d67a8cc4ac9cd, type: 2}
-      propertyPath: m_LocalScale.x
-      value: 2.4682
-      objectReference: {fileID: 0}
-    - target: {fileID: 4862571014900062, guid: 775ce9fbec34a3e43a2d67a8cc4ac9cd, type: 2}
-      propertyPath: m_LocalScale.y
-      value: 2.4682
-      objectReference: {fileID: 0}
-    - target: {fileID: 4862571014900062, guid: 775ce9fbec34a3e43a2d67a8cc4ac9cd, type: 2}
-      propertyPath: m_LocalScale.z
-      value: 2.4682
+      value: ProductRequestPortal
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 775ce9fbec34a3e43a2d67a8cc4ac9cd, type: 2}

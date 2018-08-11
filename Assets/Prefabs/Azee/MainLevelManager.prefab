@@ -21,6 +21,7 @@ GameObject:
   - component: {fileID: 4624665689444234}
   - component: {fileID: 114895143138188218}
   - component: {fileID: 114010153412659076}
+  - component: {fileID: 114157994799056670}
   m_Layer: 0
   m_Name: MainLevelManager
   m_TagString: Untagged
@@ -57,6 +58,17 @@ MonoBehaviour:
   - {fileID: 11400000, guid: c52b926aca66a7b498f7cc394881ba51, type: 2}
   _totalWeight: 0
   PrintProductCounts: 0
+--- !u!114 &114157994799056670
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1493537336526188}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 577952cd02c44384184103477546e520, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &114895143138188218
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -69,7 +81,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _gameManager:
-    GameTitle: MyAwsmaticGame!
+    GameTitle: Warehouse
     _profileListManager:
       _profileListWrapper:
         ProfileList: []
