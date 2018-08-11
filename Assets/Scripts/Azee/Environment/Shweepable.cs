@@ -4,11 +4,11 @@ using UnityEngine;
 
 public class Shweepable : MonoBehaviour
 {
-    private Rigidbody rigidbody;
+    private Rigidbody _rigidbody;
 
     void Awake()
     {
-        rigidbody = GetComponent<Rigidbody>();
+        _rigidbody = GetComponent<Rigidbody>();
     }
 
     // Use this for initialization
@@ -23,6 +23,6 @@ public class Shweepable : MonoBehaviour
 
     public void Shweep(Vector3 force)
     {
-        rigidbody.AddForce(force); // Not adding force at position, because that doesn't have much effect when too close to the object
+        _rigidbody.AddForce(force); // Not adding force at position, because that doesn't have much effect when too close to the object
     }
 }

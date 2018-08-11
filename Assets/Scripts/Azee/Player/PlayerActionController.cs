@@ -17,8 +17,23 @@ public class PlayerActionController : MonoBehaviour
 
     public ShweepDataModel ShweepData;
 
-    private string _pickupButton = "Fire1";
+    public bool IsCarrying
+    {
+        get { return _carryingObject != null; }
+    }
+
+    private string _carryButton = "Fire1";
+    private string _dropButton = "Fire1";
     private string _shweepButton = "Fire2";
+
+    private Player _player;
+
+    private Carryable _carryingObject = null;
+
+    void Awake()
+    {
+        _player = GetComponent<Player>();
+    }
 
     // Use this for initialization
     void Start()
@@ -36,9 +51,59 @@ public class PlayerActionController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (IsCarrying)
+        {
+            if (Input.GetButtonDown(_dropButton))
+            {
+                Drop(_carryingObject);
+            }
+        }
+        else
+        {
+            if (Input.GetButtonDown(_carryButton))
+            {
+                CarryPointingObject();
+            }
+        }
+
         if (Input.GetButtonDown(_shweepButton))
         {
             PerformShweep();
+        }
+    }
+
+    void CarryPointingObject()
+    {
+        RaycastHit raycastHit = new RaycastHit();
+        bool didHit = Physics.Raycast(transform.position, transform.forward, out raycastHit);
+
+        if (didHit)
+        {
+            Carryable carryable = raycastHit.transform.GetComponent<Carryable>();
+            if (carryable != null)
+            {
+                Carry(carryable);
+            }
+        }
+    }
+
+    void Carry(Carryable carryable)
+    {
+        if (IsCarrying)
+        {
+            Drop(carryable);
+        }
+
+        _carryingObject = carryable;
+        carryable.OnCarried(_player);
+    }
+
+    void Drop(Carryable carryable)
+    {
+        if (IsCarrying)
+        {
+            carryable.OnDropped();
+            _carryingObject = null;
         }
     }
 
