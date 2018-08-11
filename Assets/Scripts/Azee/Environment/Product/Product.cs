@@ -24,7 +24,7 @@ public class Product : MonoBehaviour
 
     void OnCollisionEnter(Collision collision)
     {
-        if (collision.gameObject.CompareTag("ProductDeliveryArea"))
+        if (collision.gameObject.CompareTag("ProductRequestPortal"))
         {
             // TODO: Update LED and do whateva
             Destroy(gameObject);
