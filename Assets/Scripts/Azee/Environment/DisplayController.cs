@@ -11,7 +11,7 @@ public class DisplayController : MonoBehaviour
 
 	// Use this for initialization
 	void Start () {
-		ShowProductOnScreen("Milk");
+		ShowProductOnScreen("Cylinder Item");
 	}
 	
 	// Update is called once per frame
@@ -21,7 +21,15 @@ public class DisplayController : MonoBehaviour
 
     public void ShowProductOnScreen(string productName)
     {
-//        ProductImage.sprite = productSprite;
-        ProductNameLabel.text = productName;
+        ProductModel productData = ProductManager.Instance.GetProductData(productName);
+        if (productData != null)
+        {
+            ProductImage.sprite = productData.ProductSprite;
+            ProductNameLabel.text = productData.ProductName;
+        }
+        else
+        {
+            Debug.LogError("Invalid Product Name: " + productName);
+        }
     }
 }

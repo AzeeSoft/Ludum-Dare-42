@@ -52,6 +52,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b5bced1b4cd08d54c99da2c79e9b6fa8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  CompleteProductList:
+  - {fileID: 11400000, guid: ebc4acd35183df6469ba9cf9659f9e03, type: 2}
+  - {fileID: 11400000, guid: c52b926aca66a7b498f7cc394881ba51, type: 2}
+  _totalWeight: 0
+  PrintProductCounts: 0
 --- !u!114 &114895143138188218
 MonoBehaviour:
   m_ObjectHideFlags: 1

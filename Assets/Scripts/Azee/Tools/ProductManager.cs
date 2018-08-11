@@ -7,28 +7,62 @@ public class ProductManager : MonoBehaviour
 {
     public static ProductManager Instance;
 
+    public List<ProductModel> CompleteProductList = new List<ProductModel>();
+
+    private readonly Dictionary<string, ProductModel> _productHash = new Dictionary<string, ProductModel>();
+
     private readonly Dictionary<string, int> _productCounts = new Dictionary<string, int>();
 
     [SerializeField] [ReadOnly] private float _totalWeight = 0f;
 
 
-    [Button("Print Product Counts", "PrintProductCountList")] public bool PrintProductCounts;
+    [Button("Print Product Counts", "PrintProductCountList")]
+    public bool PrintProductCounts;
 
     void Awake()
     {
         Instance = this;
+        CalculateProductHash();
     }
 
-	// Use this for initialization
-	void Start () {
+    // Use this for initialization
+    void Start()
+    {
 //		CalculateProductCounts();
 //        PrintProductCountList();
-	}
-	
-	// Update is called once per frame
-	void Update () {
-		
-	}
+    }
+
+    // Update is called once per frame
+    void Update()
+    {
+    }
+
+    private void CalculateProductHash()
+    {
+        _productHash.Clear();
+        foreach (ProductModel productModel in CompleteProductList)
+        {
+            if (!_productHash.ContainsKey(productModel.ProductName))
+            {
+                _productHash[productModel.ProductName] = productModel;
+            }
+            else
+            {
+                Debug.LogError("Duplicate Product Name Found: " + productModel.ProductName);
+            }
+        }
+    }
+
+    public ProductModel GetProductData(string productName)
+    {
+        if (_productHash.ContainsKey(productName))
+        {
+            return _productHash[productName];
+        }
+
+        return null;
+    }
+
 
     void PrintProductCountList()
     {
