@@ -22,6 +22,11 @@ public class DisplayController : MonoBehaviour
     public void ShowProductOnScreen(string productName)
     {
         ProductModel productData = ProductManager.Instance.GetProductData(productName);
+        ShowProductOnScreen(productData);
+    }
+
+    public void ShowProductOnScreen(ProductModel productData)
+    {
         if (productData != null)
         {
             ProductImage.sprite = productData.ProductSprite;
@@ -29,7 +34,7 @@ public class DisplayController : MonoBehaviour
         }
         else
         {
-            Debug.LogError("Invalid Product Name: " + productName);
+            Debug.LogError("Product Data is null");
         }
     }
 }

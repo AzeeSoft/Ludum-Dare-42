@@ -26,7 +26,8 @@ public class Product : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("ProductRequestPortal"))
         {
-            // TODO: Update LED and do whateva
+            ProductRequestManager.Instance.OnProductReceived(this);
+
             Destroy(gameObject);
         } else if (collision.gameObject.CompareTag("Incinerator"))
         {

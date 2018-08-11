@@ -405,6 +405,11 @@ Prefab:
       propertyPath: m_RootOrder
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 114157994799056670, guid: 269f58578c571104ab1fbc9a1af54a03,
+        type: 2}
+      propertyPath: _displayController
+      value: 
+      objectReference: {fileID: 1506355282}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 269f58578c571104ab1fbc9a1af54a03, type: 2}
   m_IsPrefabAsset: 0
@@ -633,6 +638,12 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 4862571014900062, guid: 775ce9fbec34a3e43a2d67a8cc4ac9cd,
     type: 2}
   m_PrefabInternal: {fileID: 1469554437}
+--- !u!114 &1506355282 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 114057110478963168, guid: 04ec84116c3d66c42ad7f28f07fb3962,
+    type: 2}
+  m_PrefabInternal: {fileID: 1101372647}
+  m_Script: {fileID: 11500000, guid: d398b5092bd47ea4ebc304a2c9023ce2, type: 3}
 --- !u!1001 &1596697550
 Prefab:
   m_ObjectHideFlags: 0

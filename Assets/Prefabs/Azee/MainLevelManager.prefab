@@ -69,6 +69,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 577952cd02c44384184103477546e520, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _displayController: {fileID: 0}
+  MaxRequestWaitTime: 10
+  _strikes: 0
+  _timeRemaining: 0
 --- !u!114 &114895143138188218
 MonoBehaviour:
   m_ObjectHideFlags: 1

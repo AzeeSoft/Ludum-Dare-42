@@ -6,6 +6,26 @@ public class ProductRequestManager : MonoBehaviour
 {
     public static ProductRequestManager Instance;
 
+    [SerializeField] private DisplayController _displayController;
+
+    public float MaxRequestWaitTime = 10f;
+
+
+    private ProductModel _requestingProduct;
+
+    public int Strikes
+    {
+        get { return _strikes; }
+    }
+
+    public float TimeRemaining
+    {
+        get { return _timeRemaining; }
+    }
+
+    [SerializeField] [ReadOnly] private int _strikes = 0;
+    [SerializeField] [ReadOnly] private float _timeRemaining = 0;
+
     void Awake()
     {
         Instance = this;
@@ -13,11 +33,59 @@ public class ProductRequestManager : MonoBehaviour
 
 	// Use this for initialization
 	void Start () {
-		
+		RequestNewProduct();
 	}
 	
 	// Update is called once per frame
 	void Update () {
-		
+		UpdateTimeRemaining();
 	}
+
+    void RequestNewProduct()
+    {
+        // TODO: Replace this with Kris's Randomizer once that's ready
+        int rand = Random.Range(0, ProductManager.Instance.CompleteProductList.Count);
+        _requestingProduct = ProductManager.Instance.CompleteProductList[rand];
+
+        _displayController.ShowProductOnScreen(_requestingProduct);
+
+        ResetTimeRemaining();
+    }
+
+    void UpdateTimeRemaining()
+    {
+        _timeRemaining -= Time.deltaTime;
+        if (_timeRemaining <= 0)
+        {
+            _timeRemaining = 0f;
+
+            // Out of time!
+            Strike();
+        }
+    }
+
+    void ResetTimeRemaining()
+    {
+        _timeRemaining = MaxRequestWaitTime;
+    }
+
+    public void OnProductReceived(Product product)
+    {
+        if (product.ProductData.ProductName.Equals(_requestingProduct.ProductName))
+        {
+            // Right Product
+            RequestNewProduct();
+        }
+        else
+        {
+            // Wrong Product
+            Strike();
+        }
+    }
+
+    void Strike()
+    {
+        _strikes++;
+        RequestNewProduct();
+    }
 }
