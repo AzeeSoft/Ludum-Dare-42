@@ -16,16 +16,26 @@ public class MainLevelManager : MonoBehaviour
     /// </summary>
     [HideInInspector] public static MainLevelManager Instance;
 
+    public int MaxStrikes = 4;
+    public float MaxTotalWeight = 100f;
+
     /// <summary>
     /// Although not needed, a private reference to the GameManager, just to display the GameManager's data in the inspector.
     /// </summary>
     [SerializeField]
     private GameManager _gameManager = GameManager.Instance;
 
+    [SerializeField] [ReadOnly] private float _score = 0f;
+
 //    public GameObject WinScreen;
 //    public GameObject LoseScreen;
 
-    private bool _isPlaying;
+    public bool IsPlaying
+    {
+        get { return _isPlaying; }
+    }
+
+    [SerializeField] [ReadOnly] private bool _isPlaying;
     private GameObject _playerGameObject;
     
 
@@ -51,12 +61,49 @@ public class MainLevelManager : MonoBehaviour
     {
 
     }
-	
-	// Update is called once per frame
-	void Update ()
-	{
-		
-	}
+
+    // Update is called once per frame
+    void Update()
+    {
+        if (IsPlaying)
+        {
+            _score += Time.deltaTime;
+        }
+
+        if (IsPlaying)
+        {
+            CheckStrikes();
+        }
+        if (IsPlaying)
+        {
+            CheckTotalWeight();
+        }
+    }
+
+    public void CheckStrikes()
+    {
+        if (ProductRequestManager.Instance.Strikes > MaxStrikes)
+        {
+            OnGameLost();
+        }
+    }
+
+    public void CheckTotalWeight()
+    {
+        if (ProductManager.Instance.GetTotalProductWeight() > MaxTotalWeight)
+        {
+            OnGameLost();
+        }
+    }
+
+    public void OnGameLost()
+    {
+        _isPlaying = false;
+
+        Debug.Log("Game Ended");
+
+        // TODO: Show End Game Screen
+    }
 
     public GameObject GetPlayerGameObject()
     {

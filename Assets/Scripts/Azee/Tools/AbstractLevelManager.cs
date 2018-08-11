@@ -9,12 +9,12 @@ using UnityEngine;
 /// Not implemented as a Singleton because Unity allows multiple scenes to be loaded simultaneously.
 /// A singleton implementation could become catastrophic!
 /// </summary>
-public abstract class LevelManager : MonoBehaviour
+public abstract class AbstractLevelManager : MonoBehaviour
 {
     /// <summary>
     /// A static reference to the last loaded LevelManager
     /// </summary>
-    [HideInInspector] public static LevelManager Instance;
+    [HideInInspector] public static AbstractLevelManager Instance;
 
     /// <summary>
     /// Although not needed, a private reference to the GameManager, just to display the GameManager's data in the inspector.
