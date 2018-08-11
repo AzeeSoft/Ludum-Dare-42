@@ -81,22 +81,22 @@ public class ProductManager : MonoBehaviour
 
     public void OnProductAdded(Product product)
     {
-        if (!_productCounts.ContainsKey(product.ProductName))
+        if (!_productCounts.ContainsKey(product.ProductData.ProductName))
         {
-            _productCounts[product.ProductName] = 0;
+            _productCounts[product.ProductData.ProductName] = 0;
         }
 
-        _productCounts[product.ProductName]++;
+        _productCounts[product.ProductData.ProductName]++;
 
-        _totalWeight += product.Weight;
+        _totalWeight += product.ProductData.Weight;
     }
 
     public void OnProductRemoved(Product product)
     {
-        if (_productCounts.ContainsKey(product.ProductName))
+        if (_productCounts.ContainsKey(product.ProductData.ProductName))
         {
-            _productCounts[product.ProductName]--;
-            _totalWeight -= product.Weight;
+            _productCounts[product.ProductData.ProductName]--;
+            _totalWeight -= product.ProductData.Weight;
 
             if (_totalWeight < 0)
             {

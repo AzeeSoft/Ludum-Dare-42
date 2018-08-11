@@ -39,8 +39,8 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1320983280964452}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 14.43, y: 0.99, z: 11.07}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -4.5222816, y: -0.037238836, z: 2.7166185}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -137,7 +137,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dfa697487fd366843bd37f4baae2b28b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ProductName: BoxTest
+  ProductData: {fileID: 11400000, guid: ebc4acd35183df6469ba9cf9659f9e03, type: 2}
 --- !u!114 &114590698351836446
 MonoBehaviour:
   m_ObjectHideFlags: 1

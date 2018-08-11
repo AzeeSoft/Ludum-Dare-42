@@ -4,8 +4,7 @@ using UnityEngine;
 
 public class Product : MonoBehaviour
 {
-    public string ProductName = "";
-    public float Weight = 1f;
+    public ProductModel ProductData;
 
     // Use this for initialization
     void Start()
