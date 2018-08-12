@@ -16,7 +16,7 @@ public class TruckSpawner : MonoBehaviour {
 
     public bool TruckDrive = false;
 
-    void TruckSimulator()
+    void TruckDrivingBack()
     {
         TruckEmpty = true;
         TruckDrive = true;
@@ -24,12 +24,22 @@ public class TruckSpawner : MonoBehaviour {
         // need animation stuff here
     }
 
-    void StopSimulation()
+    void TruckDrivingAway()
     {
         TruckEmpty = false;
         //if you need an exit animation put here
     }
 
+    void TruckContainerRaise()
+    {
+
+    }
+
+
+    void TruckContainerLower()
+    {
+
+    }
 
     // Use this for initialization
     void Start () {
@@ -49,15 +59,22 @@ public class TruckSpawner : MonoBehaviour {
 
     IEnumerator spawnMoreStuff()
     {
-        TruckSimulator();
+        TruckDrivingBack();
+        yield return new WaitForSeconds(2f); //edit this if you need to increase or decease time before container animation
+        TruckContainerRaise();
         for (int i = 0; i < HowMuchStuff; i++)
         {
             List<ProductModel> allProducts = ProductManager.Instance.GetCompleteProductList();
             int random = Random.Range(0, allProducts.Count);
             Instantiate(allProducts[random].ProductPrefab, spawnPoint.position, spawnPoint.rotation);
             yield return new WaitForSeconds(Speed);
+
+            if(i >= HowMuchStuff)
+            {
+                TruckContainerLower();
+            }
         }
-        StopSimulation();
+        TruckDrivingAway();
         
     }
     
