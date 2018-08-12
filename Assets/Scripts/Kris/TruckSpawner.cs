@@ -4,6 +4,9 @@ using UnityEngine;
 
 public class TruckSpawner : MonoBehaviour {
 
+
+    public Animator truck, bed;
+
     public Transform spawnPoint;
 
     public float Speed;
@@ -18,6 +21,7 @@ public class TruckSpawner : MonoBehaviour {
 
     void TruckDrivingBack()
     {
+        truck.SetTrigger("DriveBack");
         TruckEmpty = true;
         TruckDrive = true;
         Debug.Log("We're in the thing");
@@ -27,18 +31,21 @@ public class TruckSpawner : MonoBehaviour {
     void TruckDrivingAway()
     {
         TruckEmpty = false;
+        truck.SetTrigger("DriveAway");
         //if you need an exit animation put here
     }
 
     void TruckContainerRaise()
     {
-
+        bed.SetBool("Raising", true);
+        bed.SetBool("Lowering", false);
     }
 
 
     void TruckContainerLower()
     {
-
+        bed.SetBool("Raising", false);
+        bed.SetBool("Lowering", true);
     }
 
     // Use this for initialization
@@ -74,6 +81,7 @@ public class TruckSpawner : MonoBehaviour {
                 TruckContainerLower();
             }
         }
+        TruckContainerLower();
         TruckDrivingAway();
         
     }
