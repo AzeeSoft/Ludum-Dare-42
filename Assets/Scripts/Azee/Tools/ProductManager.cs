@@ -113,9 +113,18 @@ public class ProductManager : MonoBehaviour
         return productNames;
     }
 
-    public List<ProductModel> GetCompleteProductList()
+    public List<ProductModel> GetCompleteProductList(bool includeTrash = true)
     {
-        return CompleteProductList;
+        List<ProductModel> productList = new List<ProductModel>();
+        foreach (ProductModel productModel in productList)
+        {
+            if (!productModel.IsTrash || includeTrash)
+            {
+                productList.Add(productModel);
+            }
+        }
+
+        return productList;
     }
 
     public void OnProductAdded(Product product)
