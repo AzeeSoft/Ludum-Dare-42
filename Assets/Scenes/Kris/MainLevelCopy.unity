@@ -825,8 +825,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   spawnPoint: {fileID: 1621279659}
-  Speed: 50
-  HowMuchStuff: 50
+  Speed: 0.1
+  HowMuchStuff: 25
+  TruckTimer: 5
 --- !u!1001 &570213030
 Prefab:
   m_ObjectHideFlags: 0
