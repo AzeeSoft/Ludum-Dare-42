@@ -9,11 +9,11 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 75104b9f5e7e45f41a8909322b1a4d11, type: 3}
-  m_Name: Broom
+  m_Name: Keyboard
   m_EditorClassIdentifier: 
-  ProductName: Broom
-  ProductSprite: {fileID: 21300000, guid: 3eee0a13942171145927379e6ad27b68, type: 3}
-  ProductPrefab: {fileID: 1195068209019834, guid: 481157e157dd81d4fb185d1f87e5e045,
+  ProductName: Keyboard
+  ProductSprite: {fileID: 21300000, guid: 1565a8e652f62764abb0e5ed214ff5ca, type: 3}
+  ProductPrefab: {fileID: 1091995616435550, guid: 075e1fc689c78084c935601156a37c46,
     type: 2}
-  Weight: 1.5
+  Weight: 0.75
   IsTrash: 0

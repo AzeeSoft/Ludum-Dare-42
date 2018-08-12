@@ -21,8 +21,10 @@ GameObject:
   - component: {fileID: 4163680863429376}
   - component: {fileID: 33155466995392648}
   - component: {fileID: 23816956230514152}
-  - component: {fileID: 64942344535692084}
   - component: {fileID: 54053108785046740}
+  - component: {fileID: 114019948616875504}
+  - component: {fileID: 114371833868488660}
+  - component: {fileID: 65560968874294766}
   m_Layer: 0
   m_Name: Broom
   m_TagString: Untagged
@@ -37,8 +39,8 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1195068209019834}
   m_LocalRotation: {x: -0.7071068, y: -0, z: -0, w: 0.7071067}
-  m_LocalPosition: {x: -5.1506896, y: 0, z: -0.21325207}
-  m_LocalScale: {x: 68.31834, y: 68.318306, z: 51.577026}
+  m_LocalPosition: {x: -2.5469503, y: 0.61244, z: 8.6806}
+  m_LocalScale: {x: 34.22694, y: 34.226925, z: 25.839678}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -100,8 +102,8 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!64 &64942344535692084
-MeshCollider:
+--- !u!65 &65560968874294766
+BoxCollider:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
@@ -109,8 +111,28 @@ MeshCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  serializedVersion: 3
-  m_Convex: 0
-  m_CookingOptions: 14
-  m_SkinWidth: 0.01
-  m_Mesh: {fileID: 4300000, guid: 1f5b0daa195af2a43979b0b8667288dc, type: 3}
+  serializedVersion: 2
+  m_Size: {x: 0.022060677, y: 0.111391775, z: 0.007059658}
+  m_Center: {x: 0, y: 0.05059447, z: -0.0067999833}
+--- !u!114 &114019948616875504
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1195068209019834}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7a17f9a98d4527844ba89a33e6023cdc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &114371833868488660
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1195068209019834}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 14751e57633390c42ae4266819f5087f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

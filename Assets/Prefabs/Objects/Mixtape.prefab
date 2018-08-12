@@ -23,6 +23,8 @@ GameObject:
   - component: {fileID: 23578927815860788}
   - component: {fileID: 65038016491365174}
   - component: {fileID: 54619784103569978}
+  - component: {fileID: 114469627771191150}
+  - component: {fileID: 114336327341053230}
   m_Layer: 0
   m_Name: Mixtape
   m_TagString: Untagged
@@ -37,8 +39,8 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1283319737127280}
   m_LocalRotation: {x: -0.7071068, y: -0, z: -0, w: 0.7071067}
-  m_LocalPosition: {x: 0.054950356, y: 0, z: -1.4492459}
-  m_LocalScale: {x: 34.81653, y: 34.816513, z: 2.4775386}
+  m_LocalPosition: {x: -6.3152747, y: 10.01, z: 14.969053}
+  m_LocalScale: {x: 18.351444, y: 18.351437, z: 1.3058858}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -112,3 +114,25 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.02, y: 0.019999998, z: 0.031624656}
   m_Center: {x: 0, y: 0, z: 0.0058123297}
+--- !u!114 &114336327341053230
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1283319737127280}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7a17f9a98d4527844ba89a33e6023cdc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &114469627771191150
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1283319737127280}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 14751e57633390c42ae4266819f5087f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

@@ -9,11 +9,11 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 75104b9f5e7e45f41a8909322b1a4d11, type: 3}
-  m_Name: Broom
+  m_Name: Mixtape
   m_EditorClassIdentifier: 
-  ProductName: Broom
-  ProductSprite: {fileID: 21300000, guid: 3eee0a13942171145927379e6ad27b68, type: 3}
-  ProductPrefab: {fileID: 1195068209019834, guid: 481157e157dd81d4fb185d1f87e5e045,
+  ProductName: Mixtape
+  ProductSprite: {fileID: 21300000, guid: 65d56bcc96c59294083cbe95ba9ea1cd, type: 3}
+  ProductPrefab: {fileID: 1283319737127280, guid: 0e223292011e1f24681fe65ca7786aad,
     type: 2}
-  Weight: 1.5
+  Weight: 0.25
   IsTrash: 0

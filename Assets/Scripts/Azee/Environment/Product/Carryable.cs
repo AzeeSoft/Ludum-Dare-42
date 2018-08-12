@@ -32,11 +32,11 @@ public class Carryable : MonoBehaviour {
 	    {
 	        transform.position = Vector3.Lerp(transform.position, _playerCarrying.CarryObjectTransform.position, lerpValue);
 	        transform.rotation = Quaternion.Lerp(transform.rotation, _playerCarrying.CarryObjectTransform.rotation, lerpValue);
-	        transform.localScale = Vector3.Lerp(transform.localScale, _playerCarrying.CarryObjectTransform.localScale, lerpValue);
+	      //  transform.localScale = Vector3.Lerp(transform.localScale, _playerCarrying.CarryObjectTransform.localScale, lerpValue);
 	    }
 	    else
 	    {
-	        transform.localScale = Vector3.Lerp(transform.localScale, Vector3.one, lerpValue);
+	      //  transform.localScale = Vector3.Lerp(transform.localScale, Vector3.one, lerpValue);
         }
 	}
 

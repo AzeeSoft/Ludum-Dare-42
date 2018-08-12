@@ -9,11 +9,11 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 75104b9f5e7e45f41a8909322b1a4d11, type: 3}
-  m_Name: Broom
+  m_Name: LiteralBox
   m_EditorClassIdentifier: 
-  ProductName: Broom
-  ProductSprite: {fileID: 21300000, guid: 3eee0a13942171145927379e6ad27b68, type: 3}
-  ProductPrefab: {fileID: 1195068209019834, guid: 481157e157dd81d4fb185d1f87e5e045,
+  ProductName: LiteralBox
+  ProductSprite: {fileID: 0}
+  ProductPrefab: {fileID: 1236540690408162, guid: 710f5855feebb734f957851a59aeaadb,
     type: 2}
-  Weight: 1.5
-  IsTrash: 0
+  Weight: 2
+  IsTrash: 1
