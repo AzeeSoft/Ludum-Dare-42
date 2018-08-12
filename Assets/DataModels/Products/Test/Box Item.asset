@@ -13,4 +13,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ProductName: Box Item
   ProductSprite: {fileID: 0}
+  ProductPrefab: {fileID: 1320983280964452, guid: a83d9c0c80c4e8348bac77b00545c258,
+    type: 2}
   Weight: 1
+  IsTrash: 0

@@ -9,6 +9,7 @@ public class ProductModel : ScriptableObject
 {
     public string ProductName = "My New Product";
     public Sprite ProductSprite = null;
+    public GameObject ProductPrefab = null;
     public float Weight = 1f;
     public bool IsTrash = false;
 }

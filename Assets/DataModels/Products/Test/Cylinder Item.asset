@@ -13,4 +13,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ProductName: Cylinder Item
   ProductSprite: {fileID: 10913, guid: 0000000000000000f000000000000000, type: 0}
+  ProductPrefab: {fileID: 1343912649788538, guid: c84fd6fd306d12a4f902da919b0e4a48,
+    type: 2}
   Weight: 1
+  IsTrash: 0
