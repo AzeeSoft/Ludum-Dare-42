@@ -136,6 +136,9 @@ public class PlayerActionController : MonoBehaviour
 
     void PerformShweep()    
     {
+        //Tomas change
+        GetComponentInChildren<ShweepEffects>().OnShweep();
+
         int layerMask = -5; // All Layers
 
         Vector3 shweepOrigin = transform.position;
