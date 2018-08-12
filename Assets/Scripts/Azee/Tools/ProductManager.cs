@@ -116,7 +116,7 @@ public class ProductManager : MonoBehaviour
     public List<ProductModel> GetCompleteProductList(bool includeTrash = true)
     {
         List<ProductModel> productList = new List<ProductModel>();
-        foreach (ProductModel productModel in productList)
+        foreach (ProductModel productModel in CompleteProductList)
         {
             if (!productModel.IsTrash || includeTrash)
             {

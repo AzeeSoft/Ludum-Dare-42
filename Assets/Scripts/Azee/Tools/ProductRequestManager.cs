@@ -66,7 +66,7 @@ public class ProductRequestManager : MonoBehaviour
             }
         }
 
-        if (_requestingProduct != null)
+        if (_requestingProduct != null && _displayController != null)
         {
             _displayController.ShowProductOnScreen(_requestingProduct);
         }
