@@ -35,6 +35,10 @@ public class ProductManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (Input.GetKey(KeyCode.LeftControl) && Input.GetKeyDown(KeyCode.L))
+        {
+            PrintProductCountList();
+        }
     }
 
     private void CalculateProductHash()

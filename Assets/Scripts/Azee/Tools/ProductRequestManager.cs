@@ -10,6 +10,10 @@ public class ProductRequestManager : MonoBehaviour
 
     public float MaxRequestWaitTime = 10f;
 
+    public ProductModel RequestingModel
+    {
+        get { return _requestingProduct; }
+    }
 
     private ProductModel _requestingProduct;
 

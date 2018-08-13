@@ -2,9 +2,8 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class TruckSpawner : MonoBehaviour {
-
-
+public class TruckSpawner : MonoBehaviour
+{
     public Animator truck, bed;
 
     public Transform spawnPoint;
@@ -49,42 +48,53 @@ public class TruckSpawner : MonoBehaviour {
     }
 
     // Use this for initialization
-    void Start () {
+    void Start()
+    {
         StartCoroutine(Shipment());
     }
-	
+
 
     IEnumerator Shipment()
     {
-        while(true)
+        while (true)
         {
             StartCoroutine(spawnMoreStuff());
             yield return new WaitForSeconds(TruckTimer);
         }
-        
     }
 
     IEnumerator spawnMoreStuff()
     {
         TruckDrivingBack();
-        yield return new WaitForSeconds(2f); //edit this if you need to increase or decease time before container animation
+        yield return
+            new WaitForSeconds(2f); //edit this if you need to increase or decease time before container animation
         TruckContainerRaise();
-        for (int i = 0; i < HowMuchStuff; i++)
+
+        ProductModel currentlyRequestingProduct = ProductRequestManager.Instance.RequestingModel;
+
+        int itemsToSpawn = HowMuchStuff;
+        if (currentlyRequestingProduct != null)
+        {
+            Instantiate(currentlyRequestingProduct.ProductPrefab, spawnPoint.position,
+                spawnPoint.rotation);
+
+            itemsToSpawn--;
+        }
+
+        for (int i = 0; i < itemsToSpawn; i++)
         {
             List<ProductModel> allProducts = ProductManager.Instance.GetCompleteProductList();
             int random = Random.Range(0, allProducts.Count);
             Instantiate(allProducts[random].ProductPrefab, spawnPoint.position, spawnPoint.rotation);
             yield return new WaitForSeconds(Speed);
 
-            if(i >= HowMuchStuff)
+            if (i >= HowMuchStuff)
             {
                 TruckContainerLower();
             }
         }
+
         TruckContainerLower();
         TruckDrivingAway();
-        
     }
-    
-    
 }

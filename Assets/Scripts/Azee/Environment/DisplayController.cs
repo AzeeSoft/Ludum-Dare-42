@@ -29,6 +29,8 @@ public class DisplayController : MonoBehaviour
     {
         if (productData != null)
         {
+            Debug.Log("Showing product on screen: " + productData.ProductName);
+
             ProductImage.sprite = productData.ProductSprite;
 
             if (ProductNameLabel != null)
