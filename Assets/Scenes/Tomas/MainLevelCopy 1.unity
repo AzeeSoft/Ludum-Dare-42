@@ -1534,8 +1534,13 @@ Prefab:
         type: 2}
       propertyPath: CompleteProductList.Array.data[14]
       value: 
-      objectReference: {fileID: 11400000, guid: 164595854a79d874d81b156523dca7ed,
+      objectReference: {fileID: 11400000, guid: ebc4acd35183df6469ba9cf9659f9e03,
         type: 2}
+    - target: {fileID: 114157994799056670, guid: 269f58578c571104ab1fbc9a1af54a03,
+        type: 2}
+      propertyPath: _displayController
+      value: 
+      objectReference: {fileID: 1418969490}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 269f58578c571104ab1fbc9a1af54a03, type: 2}
   m_IsPrefabAsset: 0
@@ -1772,6 +1777,12 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1418969490 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 114027995494268504, guid: 3fc86d7415bd1c04eab081640daa073b,
+    type: 2}
+  m_PrefabInternal: {fileID: 1933803689}
+  m_Script: {fileID: 11500000, guid: d398b5092bd47ea4ebc304a2c9023ce2, type: 3}
 --- !u!1001 &1439506106
 Prefab:
   m_ObjectHideFlags: 0
