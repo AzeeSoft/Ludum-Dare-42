@@ -6,6 +6,12 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scenes/SampleScene.unity
+    path: Assets/Scenes/Azee/SampleScene.unity
     guid: 99c9720ab356a0642a771bea13969a05
+  - enabled: 1
+    path: Assets/Scenes/Tomas/MainLevelCopy 1.unity
+    guid: 2b331e22eae277344bb53b647133477d
+  - enabled: 1
+    path: Assets/Scenes/Kris/MainMenu.unity
+    guid: 7163d2909f3700a45aaa9fb75118eca5
   m_configObjects: {}
