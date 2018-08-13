@@ -30,7 +30,11 @@ public class DisplayController : MonoBehaviour
         if (productData != null)
         {
             ProductImage.sprite = productData.ProductSprite;
-            ProductNameLabel.text = productData.ProductName;
+
+            if (ProductNameLabel != null)
+            {
+                ProductNameLabel.text = productData.ProductName;
+            }
         }
         else
         {
