@@ -933,7 +933,7 @@ Prefab:
     - target: {fileID: 114010153412659076, guid: 269f58578c571104ab1fbc9a1af54a03,
         type: 2}
       propertyPath: CompleteProductList.Array.size
-      value: 7
+      value: 15
       objectReference: {fileID: 0}
     - target: {fileID: 4624665689444234, guid: 269f58578c571104ab1fbc9a1af54a03, type: 2}
       propertyPath: m_LocalPosition.x
@@ -1008,6 +1008,54 @@ Prefab:
       propertyPath: CompleteProductList.Array.data[3]
       value: 
       objectReference: {fileID: 11400000, guid: 53dac5edda5969b43ab242da6127d00d,
+        type: 2}
+    - target: {fileID: 114010153412659076, guid: 269f58578c571104ab1fbc9a1af54a03,
+        type: 2}
+      propertyPath: CompleteProductList.Array.data[7]
+      value: 
+      objectReference: {fileID: 11400000, guid: 5c1ec51a550d2ce4fa606c78a02470da,
+        type: 2}
+    - target: {fileID: 114010153412659076, guid: 269f58578c571104ab1fbc9a1af54a03,
+        type: 2}
+      propertyPath: CompleteProductList.Array.data[8]
+      value: 
+      objectReference: {fileID: 11400000, guid: 1a6c7657a49cea44ab88f16406ecd5ed,
+        type: 2}
+    - target: {fileID: 114010153412659076, guid: 269f58578c571104ab1fbc9a1af54a03,
+        type: 2}
+      propertyPath: CompleteProductList.Array.data[9]
+      value: 
+      objectReference: {fileID: 11400000, guid: 2020804ec9bc4d84d8b074fe7616737c,
+        type: 2}
+    - target: {fileID: 114010153412659076, guid: 269f58578c571104ab1fbc9a1af54a03,
+        type: 2}
+      propertyPath: CompleteProductList.Array.data[10]
+      value: 
+      objectReference: {fileID: 11400000, guid: 5e5c7ca9a98cfd2419e3fd50431db1ac,
+        type: 2}
+    - target: {fileID: 114010153412659076, guid: 269f58578c571104ab1fbc9a1af54a03,
+        type: 2}
+      propertyPath: CompleteProductList.Array.data[11]
+      value: 
+      objectReference: {fileID: 11400000, guid: 961b3e038b4247a43bd6a476e5ec9bc1,
+        type: 2}
+    - target: {fileID: 114010153412659076, guid: 269f58578c571104ab1fbc9a1af54a03,
+        type: 2}
+      propertyPath: CompleteProductList.Array.data[12]
+      value: 
+      objectReference: {fileID: 11400000, guid: 21ac71f665db8ff4c9b289861f21ee90,
+        type: 2}
+    - target: {fileID: 114010153412659076, guid: 269f58578c571104ab1fbc9a1af54a03,
+        type: 2}
+      propertyPath: CompleteProductList.Array.data[13]
+      value: 
+      objectReference: {fileID: 11400000, guid: 7a10b3b48ee0e2349945252155874b78,
+        type: 2}
+    - target: {fileID: 114010153412659076, guid: 269f58578c571104ab1fbc9a1af54a03,
+        type: 2}
+      propertyPath: CompleteProductList.Array.data[14]
+      value: 
+      objectReference: {fileID: 11400000, guid: 164595854a79d874d81b156523dca7ed,
         type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 269f58578c571104ab1fbc9a1af54a03, type: 2}
