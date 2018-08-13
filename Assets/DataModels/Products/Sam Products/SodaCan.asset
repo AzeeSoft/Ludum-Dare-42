@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Name: SodaCan
   m_EditorClassIdentifier: 
   ProductName: SodaCan
-  ProductSprite: {fileID: 0}
+  ProductSprite: {fileID: 21300000, guid: 9bba1a096c254d1479308b7bc9e553c7, type: 3}
   ProductPrefab: {fileID: 1687960457377130, guid: 578fa11f4c21e66479c55c86f979796b,
     type: 2}
   Weight: 0.1

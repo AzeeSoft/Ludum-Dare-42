@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Name: FireExtinquisher
   m_EditorClassIdentifier: 
   ProductName: FireExtinquisher
-  ProductSprite: {fileID: 0}
+  ProductSprite: {fileID: 21300000, guid: 770e8ab203f9b584faebbade7cd4b56e, type: 3}
   ProductPrefab: {fileID: 1687960457377130, guid: f363238c30b27fc48bddec00a21a72e3,
     type: 2}
   Weight: 0.6

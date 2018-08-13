@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Name: Lamp
   m_EditorClassIdentifier: 
   ProductName: Lamp
-  ProductSprite: {fileID: 0}
+  ProductSprite: {fileID: 21300000, guid: 4c17e0cc944932344b3f0f9e8ec4683b, type: 3}
   ProductPrefab: {fileID: 1687960457377130, guid: 68dc4e3e85f42aa4693963f244e48532,
     type: 2}
   Weight: 0.5

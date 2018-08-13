@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Name: SoccerBall
   m_EditorClassIdentifier: 
   ProductName: SoccerBall
-  ProductSprite: {fileID: 0}
+  ProductSprite: {fileID: 21300000, guid: 74208fde789d9d84f8341bc502b4ab39, type: 3}
   ProductPrefab: {fileID: 1687960457377130, guid: d9a2d40b35c820444b491283fda1b254,
     type: 2}
   Weight: 0.25

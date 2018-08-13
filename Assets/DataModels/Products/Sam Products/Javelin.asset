@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Name: Javelin
   m_EditorClassIdentifier: 
   ProductName: Javelin
-  ProductSprite: {fileID: 0}
+  ProductSprite: {fileID: 21300000, guid: d3a96ebef3983fb40b4cfeb7eb1f6e2b, type: 3}
   ProductPrefab: {fileID: 1687960457377130, guid: 882f3fb7092adf24197b3115d6c9b1ec,
     type: 2}
   Weight: 0.4

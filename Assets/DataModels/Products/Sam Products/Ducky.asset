@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Name: Ducky
   m_EditorClassIdentifier: 
   ProductName: Ducky
-  ProductSprite: {fileID: 0}
+  ProductSprite: {fileID: 21300000, guid: 7687b4e2987bbef41ba4223793ddf7d4, type: 3}
   ProductPrefab: {fileID: 1687960457377130, guid: d72be000296a15b46bacf16fccce9a30,
     type: 2}
   Weight: 0.25
