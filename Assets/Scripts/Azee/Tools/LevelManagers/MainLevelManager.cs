@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using EasyButtons;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 /// <summary>
 /// To be placed on every game level.
@@ -112,6 +113,10 @@ public class MainLevelManager : MonoBehaviour
         Debug.Log("Game Ended");
 
         // TODO: Show End Game Screen
+
+        SceneManager.LoadScene("LoseScreen");
+
+        
     }
 
     public GameObject GetPlayerGameObject()
