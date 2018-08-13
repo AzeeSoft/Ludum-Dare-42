@@ -12,6 +12,8 @@ using UnityEngine.SceneManagement;
 /// </summary>
 public class MainLevelManager : MonoBehaviour
 {
+    public AudioClip good, bad;
+
     /// <summary>
     /// A static reference to the last loaded LevelManager
     /// </summary>
@@ -104,6 +106,19 @@ public class MainLevelManager : MonoBehaviour
         {
             OnGameLost();
         }
+    }
+
+    public void playGoodSound()
+    {
+        GetComponent<AudioSource>().playOnAwake = false;
+        GetComponent<AudioSource>().clip = good;
+        GetComponent<AudioSource>().Play();
+    }
+    public void playBadSound()
+    {
+        GetComponent<AudioSource>().playOnAwake = false;
+        GetComponent<AudioSource>().clip = bad;
+        GetComponent<AudioSource>().Play();
     }
 
     private void OnGameLost()

@@ -100,17 +100,20 @@ public class ProductRequestManager : MonoBehaviour
         if (product.ProductData.ProductName.Equals(_requestingProduct.ProductName))
         {
             // Right Product
+            MainLevelManager.Instance.playGoodSound();
             RequestNewProduct();
         }
         else
         {
             // Wrong Product
+            MainLevelManager.Instance.playBadSound();
             Strike();
         }
     }
 
     void Strike()
     {
+        MainLevelManager.Instance.playBadSound();
         _strikes++;
         RequestNewProduct();
     }
