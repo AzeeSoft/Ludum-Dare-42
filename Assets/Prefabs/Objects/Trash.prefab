@@ -27,6 +27,7 @@ GameObject:
   - component: {fileID: 114920263031112598}
   - component: {fileID: 82154778166848078}
   - component: {fileID: 114656934820084122}
+  - component: {fileID: 114403700350815448}
   m_Layer: 0
   m_Name: Trash
   m_TagString: Untagged
@@ -213,6 +214,18 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &114403700350815448
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1328452522296314}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dfa697487fd366843bd37f4baae2b28b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ProductData: {fileID: 11400000, guid: c19856f8c990a4c439d31df7886b804a, type: 2}
 --- !u!114 &114656934820084122
 MonoBehaviour:
   m_ObjectHideFlags: 1

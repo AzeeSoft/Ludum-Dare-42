@@ -27,6 +27,7 @@ GameObject:
   - component: {fileID: 114136555212389244}
   - component: {fileID: 82945840138820692}
   - component: {fileID: 114344489623911332}
+  - component: {fileID: 114915600184927984}
   m_Layer: 0
   m_Name: Milk
   m_TagString: Untagged
@@ -247,3 +248,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 14751e57633390c42ae4266819f5087f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &114915600184927984
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1243085753701664}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dfa697487fd366843bd37f4baae2b28b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ProductData: {fileID: 11400000, guid: b6bd43da99bf92541a1fbfe6ef1eb840, type: 2}

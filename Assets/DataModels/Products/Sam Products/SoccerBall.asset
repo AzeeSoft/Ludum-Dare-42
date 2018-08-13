@@ -15,5 +15,5 @@ MonoBehaviour:
   ProductSprite: {fileID: 0}
   ProductPrefab: {fileID: 1687960457377130, guid: d9a2d40b35c820444b491283fda1b254,
     type: 2}
-  Weight: 1
+  Weight: 0.25
   IsTrash: 0

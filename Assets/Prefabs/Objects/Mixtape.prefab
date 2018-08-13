@@ -25,6 +25,7 @@ GameObject:
   - component: {fileID: 54619784103569978}
   - component: {fileID: 114469627771191150}
   - component: {fileID: 114336327341053230}
+  - component: {fileID: 114712409718381282}
   m_Layer: 0
   m_Name: Mixtape
   m_TagString: Untagged
@@ -136,3 +137,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 14751e57633390c42ae4266819f5087f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &114712409718381282
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1283319737127280}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dfa697487fd366843bd37f4baae2b28b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ProductData: {fileID: 11400000, guid: 3f5ac69521674d74cbb5d79aba7acafa, type: 2}

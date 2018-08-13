@@ -25,6 +25,7 @@ GameObject:
   - component: {fileID: 114019948616875504}
   - component: {fileID: 114371833868488660}
   - component: {fileID: 65560968874294766}
+  - component: {fileID: 114671330354624322}
   m_Layer: 0
   m_Name: Broom
   m_TagString: Untagged
@@ -136,3 +137,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 14751e57633390c42ae4266819f5087f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &114671330354624322
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1195068209019834}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dfa697487fd366843bd37f4baae2b28b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ProductData: {fileID: 11400000, guid: af9d70cdaf607134b9d77b917f30cf17, type: 2}

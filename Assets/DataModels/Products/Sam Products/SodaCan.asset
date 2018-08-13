@@ -14,5 +14,5 @@ MonoBehaviour:
   ProductName: SodaCan
   ProductSprite: {fileID: 0}
   ProductPrefab: {fileID: 100000, guid: bb75b88184bea994ba082cdb9cb435c5, type: 3}
-  Weight: 1
+  Weight: 0.1
   IsTrash: 1
