@@ -18,6 +18,12 @@ public class TruckSpawner : MonoBehaviour
 
     public bool TruckDrive = false;
 
+
+    private MainLevelManager _mainLevelManager;
+
+
+
+
     void TruckDrivingBack()
     {
         truck.SetTrigger("DriveBack");
@@ -51,7 +57,51 @@ public class TruckSpawner : MonoBehaviour
     void Start()
     {
         StartCoroutine(Shipment());
+        _mainLevelManager = FindObjectOfType<MainLevelManager>();
     }
+
+    void FixedUpdate()
+    {
+        
+        if (_mainLevelManager.CurrentDifficulty == 2)
+        {
+            HowMuchStuff = 15;
+            TruckTimer = 20;
+        }
+
+        else if (_mainLevelManager.CurrentDifficulty == 4)
+        {
+            HowMuchStuff = 20;
+            TruckTimer = 20;
+        }
+
+        else if (_mainLevelManager.CurrentDifficulty == 6)
+        {
+            HowMuchStuff = 25;
+            TruckTimer = 15;
+        }
+
+        else if (_mainLevelManager.CurrentDifficulty == 8)
+        {
+            HowMuchStuff = 25;
+            TruckTimer = 10;
+
+        }
+
+        else if (_mainLevelManager.CurrentDifficulty == 10)
+        {
+            HowMuchStuff = 30;
+            TruckTimer = 10;
+        }
+
+        else
+        {
+            //nothing
+        }
+
+    }
+
+
 
 
     IEnumerator Shipment()
@@ -88,11 +138,13 @@ public class TruckSpawner : MonoBehaviour
             Instantiate(allProducts[random].ProductPrefab, spawnPoint.position, spawnPoint.rotation);
             yield return new WaitForSeconds(Speed);
 
+
             if (i >= HowMuchStuff)
             {
                 TruckContainerLower();
             }
         }
+
 
         TruckContainerLower();
         TruckDrivingAway();
