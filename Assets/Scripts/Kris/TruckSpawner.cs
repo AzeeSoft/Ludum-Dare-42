@@ -137,6 +137,7 @@ public class TruckSpawner : MonoBehaviour
             List<ProductModel> allProducts = ProductManager.Instance.GetCompleteProductList();
             int random = Random.Range(0, allProducts.Count);
             Instantiate(allProducts[random].ProductPrefab, spawnPoint.position, spawnPoint.rotation);
+            allProducts[random].ProductPrefab.GetComponent<Rigidbody>().AddForce(spawnPoint.forward * 100);
             yield return new WaitForSeconds(Speed);
 
 
