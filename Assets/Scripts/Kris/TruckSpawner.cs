@@ -129,6 +129,7 @@ public class TruckSpawner : MonoBehaviour
                 spawnPoint.rotation);
 
             itemsToSpawn--;
+            yield return new WaitForSeconds(Speed);
         }
 
         for (int i = 0; i < itemsToSpawn; i++)
